@@ -1,7 +1,6 @@
 package com.madao.scheduler.controller;
 
 import com.madao.scheduler.model.Availability;
-import com.madao.scheduler.repositories.AvailabilityRepository;
 import com.madao.scheduler.service.AvailabilityService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

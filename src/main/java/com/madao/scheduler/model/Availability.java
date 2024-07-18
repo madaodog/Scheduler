@@ -23,4 +23,11 @@ public class Availability {
     private LocalTime startTime;
     private LocalTime endTime;
 
+    public Availability(Long doctorID, LocalDate date, LocalTime startTime, LocalTime endTime) {
+        this.doctorID = doctorID;
+        this.date = date;
+        this.startTime = startTime;
+        this.endTime = endTime;
+    }
+
 }

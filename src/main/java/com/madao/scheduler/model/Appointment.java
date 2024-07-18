@@ -7,8 +7,11 @@ import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 @Entity
-@Data  // Lombok @Data combines @Getter, @Setter, @ToString, @EqualsAndHashCode, and @NoArgsConstructor
+@Data
 @NoArgsConstructor
 public class Appointment {
     @Id
@@ -16,7 +19,17 @@ public class Appointment {
     private Long appointmentID;
     private Long doctorID;
     private Long patientID;
-    private String date;
-    private String timeSlot;
+    private LocalDate date;
+    private LocalTime startTime;
+    private LocalTime endTime;
+
+
+    public Appointment(Long doctorID, Long patientID, LocalDate date, LocalTime startTime, LocalTime endTime) {
+        this.doctorID = doctorID;
+        this.patientID = patientID;
+        this.date = date;
+        this.startTime = startTime;
+        this.endTime = endTime;
+    }
 
 }
