@@ -44,12 +44,12 @@ public class DataInitializer implements CommandLineRunner {
         doctorRepository.save(doctor2);
 
         // Add initial data for Availability
-        availabilityRepository.save(new Availability(doctor1.getDoctorID(), LocalDate.of(2024, 7, 18), LocalTime.of(9, 0), LocalTime.of(17, 0)));
-        availabilityRepository.save(new Availability(doctor2.getDoctorID(), LocalDate.of(2024, 7, 19), LocalTime.of(10, 0), LocalTime.of(16, 0)));
+        availabilityRepository.save(new Availability(doctor1.getDoctorID(), LocalDate.of(2025, 7, 18), LocalTime.of(9, 0), LocalTime.of(17, 0)));
+        availabilityRepository.save(new Availability(doctor2.getDoctorID(), LocalDate.of(2025, 7, 19), LocalTime.of(10, 0), LocalTime.of(16, 0)));
 
         // Add initial data for Appointments
-        appointmentRepository.save(new Appointment(doctor1.getDoctorID(), patient1.getPatientID(), LocalDate.of(2024, 7, 18), LocalTime.of(10, 0), LocalTime.of(10, 30)));
-        appointmentRepository.save(new Appointment(doctor2.getDoctorID(), patient2.getPatientID(), LocalDate.of(2024, 7, 19), LocalTime.of(11, 0), LocalTime.of(11, 30)));
+        appointmentRepository.save(new Appointment(doctor1.getDoctorID(), patient1.getPatientID(), LocalDate.of(2025, 7, 18), LocalTime.of(10, 0), LocalTime.of(10, 30)));
+        appointmentRepository.save(new Appointment(doctor2.getDoctorID(), patient2.getPatientID(), LocalDate.of(2025, 7, 19), LocalTime.of(11, 0), LocalTime.of(11, 30)));
     }
 
 }

@@ -13,6 +13,9 @@ import java.time.LocalTime;
 @Entity
 @Data
 @NoArgsConstructor
+/**
+ * Make every appointment last 30 minutes, so endTime is always 30 minutes after startTime
+ */
 public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

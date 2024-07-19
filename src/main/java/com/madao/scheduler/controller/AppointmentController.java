@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.madao.scheduler.repositories.AppointmentRepository;
 
+import java.time.LocalTime;
 import java.util.List;
 
 @RequestMapping("/api")
@@ -35,6 +36,10 @@ public class AppointmentController {
         return new ResponseEntity<>(appointmentService.getAppointmentsByDoctorID(doctorID), HttpStatus.OK);
     }
 
-
+    @PostMapping("/appointment/{availabilityID}")
+    public ResponseEntity<Appointment> bookAppointment(@PathVariable Long availabilityID, @RequestBody String email, @RequestBody LocalTime startTime,
+                                                       @RequestBody String name, @RequestBody String phoneNumber, @RequestBody String address) {
+        return new ResponseEntity<>(appointmentService.bookAppointment(availabilityID, email, startTime, name, phoneNumber, address), HttpStatus.OK);
+    }
 
 }
